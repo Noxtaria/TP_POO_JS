@@ -7,6 +7,6 @@ export default class Moto extends Vehicule {
     }
 
     display(){
-        return `Moto : ` + super.display() 
+        return `<b>Moto :</b> ` + super.display()
     }
 }

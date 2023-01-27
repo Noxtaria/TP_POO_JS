@@ -8,6 +8,6 @@ export default class Voiture extends Vehicule {
     }
 
     display(){
-        return `<p>Voiture : ` + super.display() + ` ${this.clim}</p>`
+        return `<p><b>Voiture : </b> ` + super.display() + ` - ${this.clim}</p>`
     }
 }
