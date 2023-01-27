@@ -7,6 +7,6 @@ export default class Vehicule {
     }
 
     display(){
-        return `<p>${this.marque} ${this.modele} ${this.kilometrage}km ${this.annee}</p>`
+        return `<span>${this.marque} ${this.modele} ${this.kilometrage}km ${this.annee}</span>`
     }
 }

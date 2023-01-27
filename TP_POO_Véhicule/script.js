@@ -1,5 +1,6 @@
 import Voiture from "./class/Voiture.js";
 import Moto from "./class/Moto.js";
+import Vehicule from "./class/Vehicule.js";
 
 const affichage = document.querySelector("#result");
 
