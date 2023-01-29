@@ -1,4 +1,6 @@
 import Contact from "./class/Contact.js"
+const titleMr = document.querySelector("#title-mr");
+const titleMme = document.querySelector("#title-mme");
 const btnSubmit = document.querySelector("#button");
 const tableData = document.querySelector("#data");
 
@@ -26,8 +28,14 @@ const listContact = () => {
 
 btnSubmit.addEventListener("click", (e) => {
     e.preventDefault();
+    let title = "";
+    if(titleMr.checked) {
+        title = titleMr.value;
+    } else if (titleMme.checked) {
+        title = titleMme.value;
+    };
     let newContact = new Contact(
-      document.querySelector("#title-mr").value,
+      title,
       document.querySelector("#lastname").value,
       document.querySelector("#firstname").value,
       document.querySelector("#birthday").value,
