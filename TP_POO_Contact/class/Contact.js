@@ -1,10 +1,10 @@
 export default class Contact {
-    constructor(titre, nom, prenom, dateNaissance, telephone, email){
-        this.titre = titre;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.dateNaissance = dateNaissance;
-        this.telephone = telephone;
+    constructor(title, lastname, firstname, birthday, phone, email){
+        this.title = title;
+        this.lastname = lastname;
+        this.firstname = firstname;
+        this.birthday = birthday;
+        this.phone = phone;
         this.email = email;
     }
 
