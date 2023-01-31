@@ -1,14 +1,10 @@
 export default class Vehicule {
-  constructor(marque, modele, kilometrage, annee, immatriculation) {
-    (this.marque = marque),
-    (this.modele = modele),
-    (this.kilometrage = kilometrage),
-    (this.annee = annee),
+  constructor(immatriculation) {
     (this.immatriculation = immatriculation);
   }
 
   display() {
-    
+    return `<span>${this.marque} - ${this.modele} - ${this.kilometrage}km - ${this.annee} - ${this.immatriculation}</span>`
   }
 
 

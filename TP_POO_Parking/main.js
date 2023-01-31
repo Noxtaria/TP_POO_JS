@@ -1,17 +1,8 @@
-// import Vehicule from "./class/Véhicule.js";
+import { Ihm } from "./class/Ihm.js";
 
-// const btnOut = document.querySelector("#payer");
-// const affichageResultat = document.querySelector("#result");
+const btnObtenirTicket = document.querySelector("#obtenir-ticket");
+const btnPayer = document.querySelector("#payer");
+const saisieImmatriculation = document.querySelector("#immatriculation");
+const affichageResultat = document.querySelector("#result");
 
-
-
-// btnOut.addEventListener('click', () => {
-//     heureSortie = new Date()
-// })
-
-// tempsParking = (heureSortie-heureEntree)/1000;
-
-// const voiture = new Vehicule("BMW", "Serie-S", "15000", "2008", "FF-456-KB");
-
-// // affichageResultat.innerHTML += voiture.immatriculation
-
+const ihm = new Ihm(saisieImmatriculation, affichageResultat);
