@@ -10,11 +10,22 @@
     <title>TP Parking</title>
 </head>
 <body>
-
+    <h2>Parking 3000</h2>
+    <form>
+        <div class="">
+            <p id="result"></p>
+            <input style="width: 20%;" type="text" id="immatriculation" placeholder="Votre plaque d'immatriculation">
+            <button class="btn btn-warning" id="payer" type="button">Payer</button>
+        </div>
+        <div>
+            <button class="btn btn-success" id="obtenir-ticket">Obtenir un ticket</button>
+        </div>
+    </form>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-<script src="main.js" type="module"></script>
+<script src="./main.js" type="module"></script>
+<script src="./class/Véhicule.js" type="module"></script>
 </html>
