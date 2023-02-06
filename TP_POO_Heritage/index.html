@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <title>Heritage</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="d-flex mx-auto text-center" style="width: 70%">
+        <div class="col-6 mx-4">
+          <table class="table container">
+            <thead>
+                <h2>Produits :</h2>
+              <tr class="table-dark">
+                <th scope="col">Titre</th>
+                <th scope="col">Prix</th>
+                <th scope="col">description</th>
+                <th scope="col">stock</th>
+              </tr>
+            </thead>
+            <tbody id="resultProduit"></tbody>
+          </table>
+        </div>
+        <div class="col-6">
+          <table class="table container">
+            <thead>
+                <h2>Services :</h2>
+              <tr class="table-dark">
+                <th scope="col">Titre</th>
+                <th scope="col">Prix</th>
+                <th scope="col">description</th>
+                <th scope="col">domaine</th>
+              </tr>
+            </thead>
+            <tbody id="resultService"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <form id="form" class="container">
+      <div class="row m-1">
+        <div class="col-2">
+          <input type="radio" id="input-produit" name="prestation" value="#" />
+          <label>Produit</label>
+        </div>
+        <div class="col-2">
+          <input type="radio" id="input-service" name="prestation" value="#" />
+          <label>Service</label>
+        </div>
+      </div>
+      <div class="row m-1">
+        <div class="col-6 p-1">
+          <input
+            class="form-control"
+            placeholder="Titre"
+            name="titre"
+            type="text"
+          />
+        </div>
+        <div class="col-6 p-1">
+          <input
+            class="form-control"
+            placeholder="Prix"
+            name="prix"
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="col mb-1">
+        <input
+          class="form-control"
+          placeholder="Description"
+          name="description"
+          type="textarea"
+        />
+      </div>
+      <div class="col mb-1">
+        <input
+          class="form-control"
+          placeholder="Domaine"
+          name="domaine"
+          type="text"
+        />
+      </div>
+      <div class="col mb-1">
+        <input
+          class="form-control"
+          placeholder="Stock"
+          name="stock"
+          type="text"
+        />
+      </div>
+      <div class="row m-1">
+        <button class="col btn btn-success" type="submit">Valider</button>
+      </div>
+    </form>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"
+  ></script>
+  <script src="main.js" type="module"></script>
+</html>
