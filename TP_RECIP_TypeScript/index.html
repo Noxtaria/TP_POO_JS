@@ -34,11 +34,41 @@
             <div>
               <label for="prep-time">Temps de préparation</label>
             </div>
-            <input type="range" id="prep-time" name="prep-time" />
+            <input
+              type="range"
+              id="prep-time"
+              name="prep-time"
+              min="1"
+              max="5"
+              step="1"
+              class="form-range"
+            />
+            <div class="d-flex justify-content-between">
+              <span>15 min</span>
+              <span>30 min</span>
+              <span>45 min</span
+              ><span>1h</span>
+              <span>1h +</span>
+            </div>
             <div>
               <label for="cook-time">Temps de cuisson</label>
             </div>
-            <input type="range" id="cook-time" name="cook-time" />
+            <input
+              type="range"
+              id="cook-time"
+              name="cook-time"
+              min="1"
+              max="5"
+              step="1"
+              class="form-range"
+            />
+            <div class="d-flex justify-content-between">
+              <span>15 min</span>
+              <span>30 min</span>
+              <span>45 min</span
+              ><span>1h</span>
+              <span>1h +</span>
+            </div>
             <div>
               <label for="list-ingredient">Ingredients</label>
             </div>
@@ -56,9 +86,7 @@
             </div>
             <input type="text" id="nom-recette" name="nom-recette" />
             <hr />
-
           </div>
-          
         </div>
         <div class="col-8">
           <div class="bg-dark rounded p-3 text-light">
