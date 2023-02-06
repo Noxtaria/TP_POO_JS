@@ -1,51 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  <script src="./assets//js/main.js" defer type="module"></script>
-  <title>eContacts</title>
-</head>
-<body>
-  <main class="container my-3">
-    <div class="row g-3">
-      <div class="col-4">
-        <div class="bg-dark rounded p-3 text-light">
-          <h3>Contacts</h3>
-          <hr>
-          <div class="d-flex flex-column" id="contactsContainer"></div>
-          <hr>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets//js/main.js" defer type="module"></script>
+    <title>TP Recette</title>
+  </head>
+  <body>
+    <main class="container my-3">
+      <div class="row g-3">
+        <div class="col-4">
+          <div class="bg-dark rounded p-3 text-light">
+            <h3>Filtre</h3>
+            <hr />
+            <div class="d-flex flex-column" id="filtreContainer"></div>
+            <div>
+              <label for="prep-time">Temps de préparation</label>
+            </div>
+            <input type="range" id="prep-time" name="prep-time" />
+            <div>
+              <label for="cook-time">Temps de cuisson</label>
+            </div>
+            <input type="range" id="cook-time" name="cook-time" />
+            <div>
+              <label for="list-ingredient">Ingredients</label>
+            </div>
+            <select name="ingredients" id="ingredient-select">
+              <option value="">--Selectionner vos ingrédients--</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+              <option value="hamster">Hamster</option>
+              <option value="parrot">Parrot</option>
+              <option value="spider">Spider</option>
+              <option value="goldfish">Goldfish</option>
+            </select>
+            <div>
+              <label for="nom-recette">Nom de la recette</label>
+            </div>
+            <input type="text" id="nom-recette" name="nom-recette" />
+            <hr />
+
+          </div>
+          
         </div>
-      </div>
-      <div class="col-8">
-        <div class="bg-dark rounded p-3 text-light">
-          <h3>Détails</h3>
-          <hr>
-          <div class="row">
-            <div class="col-12">
-              <div class="mb-3">
-                <label for="details-email" class="form-label">Email:</label>
-                <input type="text" id="details-email" name="details-email" class="form-control" readonly>
-              </div>
-              <div class="mb-3">
-                <label for="details-phoneNumber" class="form-label">Phone number:</label>
-                <input type="text" id="details-phoneNumber" name="details-phoneNumber" class="form-control" readonly>
+        <div class="col-8">
+          <div class="bg-dark rounded p-3 text-light">
+            <h3>Recette</h3>
+            <hr />
+            <div class="row">
+              <div class="col-12">
+                <div class="mb-3">
+                  <label for="titre-recette" class="form-label">Titre :</label>
+                  <input
+                    type="text"
+                    id="titre-recette"
+                    name="titre-recette"
+                    class="form-control"
+                    readonly
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="instruction-recette" class="form-label"
+                    >Instruction</label
+                  >
+                  <input
+                    type="text"
+                    id="instruction-recette"
+                    name="instruction-recette"
+                    class="form-control"
+                    readonly
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <hr>
-          <div class="text-end">
-            <button class="btn btn-warning" id="btnEditContact"><i class="bi bi-pencil-square"></i> Edit</button>
-            <button class="ms-3 btn btn-danger" id="btnDeleteContact"><i class="bi bi-trash"></i> Delete</button>
+            <hr />
+            <div class="text-end">
+              <button class="ms-3 btn btn-warning" id="btnDetailsRecipe">
+                <i class=""></i> Details
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-</body>
+    </main>
+  </body>
 </html>
