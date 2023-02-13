@@ -1,0 +1,11 @@
+.box-produit{
+    border: 1px solid blue;
+    height: 30vh;
+    width: 20vw;
+    text-align: center;
+    margin: 1vh;
+}
+
+.h2-produit{
+    text-align: center;
+}
