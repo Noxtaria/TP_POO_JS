@@ -1,0 +1,10 @@
+.box-task {
+    width: 65vw;
+    height: 95vh;
+    background-color: black;
+    border-radius: 2%;
+}
+
+* {
+    color: white;
+}

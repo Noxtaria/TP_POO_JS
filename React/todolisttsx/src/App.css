@@ -1,0 +1,21 @@
+.container{
+  display: flex;
+  margin: 1%;
+  justify-content: space-between;
+}
+
+.header-box {
+  margin: 2%;
+}
+
+textarea {
+  width: 99%;
+  color: black;
+  margin-bottom: 5%;
+
+}
+
+title{
+  color: black;
+}
+

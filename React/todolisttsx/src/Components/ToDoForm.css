@@ -1,0 +1,22 @@
+.box-form {
+    width: 30vw;
+    height: 80vh;
+    background-color: black;
+    border-radius: 2%;
+}
+
+* {
+    color: white;
+}
+
+input{
+    color: black;
+    width: 95%;
+    padding: 2%;
+    margin-bottom: 5%;
+}
+
+button{
+    color: black;
+    padding: 2%;
+}
