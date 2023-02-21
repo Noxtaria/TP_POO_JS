@@ -1,0 +1,41 @@
+.container {
+    width: 30vw;
+    height: 30vh;
+    background-color: black;
+    display: block;
+    margin: auto;
+}
+
+.box-circle {
+    width: 10vw;
+    height: 20vh;
+    border-radius: 50%;
+    background-color: cyan;
+    display: block;
+    margin: auto;
+}
+
+.compteur {
+    text-align: center;
+    padding-top: 40%;
+    font-size: 34px;
+}
+
+button {
+    background-color: blueviolet;
+    width: 4vw;
+    height: 8vh;
+    border-radius: 50%;
+    opacity: 0.8;
+    color: white;
+    font-size: 34px;
+}
+
+.button-select{
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 {
+    color: white;
+}
