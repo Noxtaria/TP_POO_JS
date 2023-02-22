@@ -3,12 +3,14 @@ import ModalComponent from "./components/ModalComponent";
 import { createPortal } from "react-dom";
 import "./App.css";
 import API_KEY from "./apiKey";
+import ContactDisplay from "./components/ContactDisplay";
 
-function App() {
+export const App = () => {
   const BASE_DB_URL =
     "https://m2i-auth-demo-fox-default-rtdb.europe-west1.firebasedatabase.app/";
   const [modalVisible, setModalVisible] = useState(false);
-  const [isLogging, setIsLogging] = useState(false);
+  const [isLogging, setIsLogging] = useState(true); // Ajouter cette variable d'état
+  const [isRegistering, setIsRegistering] = useState(false); // Ajouter cette variable d'état
   const [isLogged, setIsLogged] = useState(false);
 
   const emailRef = useRef();
@@ -79,7 +81,42 @@ function App() {
 
   return (
     <>
-      {modalVisible &&
+
+<header>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div className="container-fluid">
+            <a href="#" className="navbar-brand">
+              <i className="bi bi-globe2"></i> eContacts
+            </a>
+            <div id="libraryNavbar" className="collapse navbar-collapse">
+              <div className="ms-auto me-2 navbar-item dropdown">
+                <button
+                  className="btn btn-info"
+                  onClick={() => {
+                    setIsRegistering(false); // Mettre à jour les variables d'état
+                    setIsLogging(true);
+                    isLogged ? logOutHandler() : setModalVisible(true);
+                  }}
+                >
+                  {isLogged ? "Log Out" : "Connexion"}
+                </button>
+                <button
+                  className="btn btn-info mx-2"
+                  onClick={() => {
+                    setIsRegistering(true); // Mettre à jour les variables d'état
+                    setIsLogging(false);
+                    isLogged ? logOutHandler() : setModalVisible(true);
+                  }}
+                >
+                  {isLogged ? "" : "Register"}
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      {modalVisible && // Utiliser les variables d'état pour afficher le bon formulaire
         createPortal(
           <ModalComponent closeModal={() => setModalVisible(false)}>
             <div className="d-flex justify-content-between align-items center">
@@ -133,27 +170,26 @@ function App() {
         )}
       <div className="container">
         <div className="row g-2 py-3">
-          <div className="col-8">
+          <div className="col">
             <div className="bg-dark text-light rounded p-3">
               <div className="d-flex justify-content-between align-items-center">
-                <h1>App</h1>
-                <button
-                  className="btn btn-primary"
-                  onClick={() =>
-                    isLogged ? logOutHandler() : setModalVisible(true)
-                  }
-                >
-                  {isLogged ? "Log Out" : "Show Modal"}
-                </button>
+                <h1>Contacts</h1>
               </div>
               <hr />
-              <p>Il n'y a pas de tâches dans la base de données !</p>
+              {contacts.length === 0 ? 
+              <p>Il n'y a pas de contact dans la base de données !</p> :
+              <ContactDisplay key={contacts.id} contact={contacts} />}
             </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
 
 export default App;
+
+
+          
+  
+    
