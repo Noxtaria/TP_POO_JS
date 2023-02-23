@@ -5,6 +5,7 @@ import ModalComponent from "./components/shared/Modal";
 import API_KEY from "./apiKey.js";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsLoggedAction } from "./components/recipeList/RecipeListSlice";
+import { RecipeContainerComponent } from "./components/recipeContainer/RecipeContainerComponent";
 
 function App() {
   const dispatch = useDispatch();
@@ -145,6 +146,7 @@ function App() {
             </div>
           </nav>
         </header>
+        <RecipeContainerComponent/>
       </div>
     </>
   );

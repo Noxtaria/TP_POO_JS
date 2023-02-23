@@ -6,13 +6,12 @@ export const RecipeContainerComponent=(props)=>{
   const ingredients = useSelector(state => state.recipeList.ingredients)
 
   return(
-      <div className="recipeContainer">
-        <div className="headerRecipeContainer">
-          <h2>Recipe List</h2>
-          {isLogged &&<button>Add</button>}
+      <div className="col-10 offset-1 rounded bg-dark text-light p-3 mt-3">
+        <div className="d-flex justify-content-between align-items-center">
+          <h2>Recipes List</h2>
+          {isLogged &&<button className='btn btn-success'><i className="bi bi-plus-circle"></i> Add</button>}
         </div>
         <hr />
-        <div>{ingredients.length !==0 && ingredients.map((ingredient,index) => <p key={index} >{ingredient}</p>)}</div>
       </div>
   )
 } 
