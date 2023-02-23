@@ -1,10 +1,10 @@
 import './App.css';
 import {useEffect, useRef, useState} from 'react'
 import {createPortal} from "react-dom"
-import ModalComponent from "./Component/Shared/ModalComponent"
+import ModalComponent from "./components/Shared/ModalComponent"
 import API_KEY from "./apiKey.js"
 import { useDispatch, useSelector } from 'react-redux';
-import { setIsLoggedAction } from './Component/RecipeList/RecipeListSlice';
+import { setIsLoggedAction } from './components/RecipeList/RecipeListSlice';
 
 function App() {
 

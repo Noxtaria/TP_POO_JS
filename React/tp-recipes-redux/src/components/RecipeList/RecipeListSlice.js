@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const RecipeListSclice = createSlice({
   name:"RecipeList",
   initialState:{
@@ -12,13 +11,9 @@ const RecipeListSclice = createSlice({
     setIsLoggedAction(state, actions){
       state.isLogged= actions.payload
     },
-    setIngredientsAction(state,actions){
-      state.ingredients = actions.payload
-    }
-
   }
 })
 
-export const { setIsLoggedAction, setIngredientsAction} = RecipeListSclice.actions
+export const { setIsLoggedAction} = RecipeListSclice.actions
 
 export default RecipeListSclice.reducer
