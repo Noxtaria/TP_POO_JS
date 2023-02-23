@@ -2,6 +2,7 @@
 
 #lien de la clé api
 src/apiKey.js
+
 # dependencies
 /node_modules
 /.pnp
