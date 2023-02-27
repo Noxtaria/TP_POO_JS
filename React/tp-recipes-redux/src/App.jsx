@@ -90,9 +90,7 @@ function App() {
               <input type="text" id="inputEmail" ref={emailRef} />
               <label htmlFor="inputPassword">Password :</label>
               <input type="password" id="inputPassword" ref={passwordRef} />
-              <div>
-                <button>{isLoggin ? "Log In" : "Register"}</button>
-              </div>
+              <button className="btn btn-info ms-3">{isLoggin ? "Log In" : "Register"}</button>
             </form>
           </ModalComponent>,
           document.getElementById("modal-root")
