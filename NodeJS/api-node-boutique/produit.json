@@ -1,0 +1,4 @@
+[
+  { "id": 1, "titre": "Pomme", "prix": 2, "stock": 74 },
+  { "id": 2, "titre": "Poire", "prix": 1, "stock": 137 }
+]
